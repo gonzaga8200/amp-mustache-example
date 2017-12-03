@@ -20,16 +20,16 @@
 <amp-list src="https://gonzaga8200.github.io/amp-mustache-example/source.json" layout="fixed-height" height="80">
     <template type="amp-mustache">
         <div id="cart">
-            {{#cart_items}}
+            {{#last_minute}}
             <div class="cart-item">
-                <span>{{name}}</span>
-                <span>{{quantity}}</span>
+                <span>{{route}}</span>
+                <span>{{carrier}}</span>
                 <span>{{price}}</span>
             </div>
-            {{/cart_items}}
-            {{^cart_items}}
+            {{/last_minute}}
+            {{^last_minute}}
             Your cart is empty!
-            {{/cart_items}}
+            {{/last_minute}}
         </div>
     </template>
 </amp-list>
