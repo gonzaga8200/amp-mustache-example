@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <title>Amp Mustache Example</title>
+</head>
+<body>
+<amp-list src="https://ampbyexample.com/json/cart.json"
+          layout="fixed-height"
+          height="56">
+    <template type="amp-mustache">
+        Hi {{fullname}}!
+    </template>
+</amp-list>
+<amp-list src="https://gonzaga8200.github.io/amp-mustache-example/source.json" layout="fixed-height" height="80">
+    <template type="amp-mustache">
+        <div id="cart">
+            {{#cart_items}}
+            <div class="cart-item">
+                <span>{{name}}</span>
+                <span>{{quantity}}</span>
+                <span>{{price}}</span>
+            </div>
+            {{/cart_items}}
+            {{^cart_items}}
+            Your cart is empty!
+            {{/cart_items}}
+        </div>
+    </template>
+</amp-list>
+
+
+</body>
+</html>
